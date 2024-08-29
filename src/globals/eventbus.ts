@@ -1,4 +1,4 @@
-import { EventBus } from "@saticoy/core";
+import { EventBus } from '@saticoy/core';
 
 const eventBus = new EventBus();
 

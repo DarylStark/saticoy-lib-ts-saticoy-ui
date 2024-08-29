@@ -10,18 +10,26 @@ import { I18nextProvider } from 'react-i18next';
 import { i18n, i18nController } from '../globals/i18n';
 
 // Styling
-import { ChakraProvider, ColorModeProvider, extendTheme } from '@chakra-ui/react';
+import {
+    ChakraProvider,
+    ColorModeProvider,
+    extendTheme,
+} from '@chakra-ui/react';
 import { themeController } from '../globals/theme';
 
 interface SaticoyUIProps {
-    pageTitle: string
-    children: React.ReactNode
+    pageTitle: string;
+    children: React.ReactNode;
 }
 
 function SaticoyUI(props: SaticoyUIProps) {
     // State for theming
-    const [chakra_ui_color_mode, setChakraUiColorMode] = useState(themeController.currentStyle?.chakra_mode);
-    const [chakra_ui_theme, setChakraUiTheme] = useState(themeController.currentStyle?.chakra_theme);
+    const [chakra_ui_color_mode, setChakraUiColorMode] = useState(
+        themeController.currentStyle?.chakra_mode,
+    );
+    const [chakra_ui_theme, setChakraUiTheme] = useState(
+        themeController.currentStyle?.chakra_theme,
+    );
 
     // Update the theme when the theme changes
     themeController.eventBus?.on('theme_changed', () => {
@@ -30,9 +38,11 @@ function SaticoyUI(props: SaticoyUIProps) {
     });
 
     // Make sure the theme mode is updated when the user changes the system theme
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        themeController.raiseForChange();
-    });
+    window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', () => {
+            themeController.raiseForChange();
+        });
 
     // Context
     const contextValue: SaticoyUIContextProps = {

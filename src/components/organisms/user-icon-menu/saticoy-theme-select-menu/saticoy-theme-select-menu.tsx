@@ -22,22 +22,21 @@ function SaticoyThemeSelectMenu() {
 
     function getThemes() {
         const themes = themeController.themeRepository.getNames(true);
-        return themes.map(t => ({ 'name': t, value: t }));
+        return themes.map((t) => ({ name: t, value: t }));
     }
 
     // Update the mode when the mode changes
     const updateMode = (mode: string) => {
-        if (mode === 'auto')
-            return themeController.isAutoMode = true;
-        themeController.selectedMode = mode === 'dark' ? ThemeMode.Dark : ThemeMode.Light;
-    }
+        if (mode === 'auto') return (themeController.isAutoMode = true);
+        themeController.selectedMode =
+            mode === 'dark' ? ThemeMode.Dark : ThemeMode.Light;
+    };
 
     // Update the theme when the theme changes
     const updateTheme = (theme: string) => {
-        if (theme === 'auto')
-            return themeController.isAutoTheme = true;
-        themeController.selectedTheme = theme
-    }
+        if (theme === 'auto') return (themeController.isAutoTheme = true);
+        themeController.selectedTheme = theme;
+    };
 
     // State for theming
     const [selectedMode, setSelectedMode] = useState(getSelectedThemeMode());
@@ -55,17 +54,19 @@ function SaticoyThemeSelectMenu() {
     });
 
     // The component
-    return <ThemeSelectMenu
-        themes={getThemes()}
-        selectedMode={selectedMode}
-        selectedTheme={selectedTheme}
-        onChangeMode={updateMode}
-        onChangeTheme={updateTheme}
-        stringAutomaticMode={t('theming.automatic_mode')}
-        stringDefaultTheme={t('theming.default_theme')}
-        stringDarkMode={t('theming.dark_mode')}
-        stringLightMode={t('theming.light_mode')}
-    />
+    return (
+        <ThemeSelectMenu
+            themes={getThemes()}
+            selectedMode={selectedMode}
+            selectedTheme={selectedTheme}
+            onChangeMode={updateMode}
+            onChangeTheme={updateTheme}
+            stringAutomaticMode={t('theming.automatic_mode')}
+            stringDefaultTheme={t('theming.default_theme')}
+            stringDarkMode={t('theming.dark_mode')}
+            stringLightMode={t('theming.light_mode')}
+        />
+    );
 }
 
-export default SaticoyThemeSelectMenu
+export default SaticoyThemeSelectMenu;

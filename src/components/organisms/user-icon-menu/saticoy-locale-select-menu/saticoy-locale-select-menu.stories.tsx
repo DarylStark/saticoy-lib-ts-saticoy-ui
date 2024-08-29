@@ -1,5 +1,5 @@
-import SaticoyLocaleSelectMenu from "./saticoy-locale-select-menu";
-import { StoryFn } from "@storybook/react";
+import SaticoyLocaleSelectMenu from './saticoy-locale-select-menu';
+import { StoryFn } from '@storybook/react';
 
 export default {
     title: 'Organisms/UserIconMenu/SaticoyLocaleSelectMenu',

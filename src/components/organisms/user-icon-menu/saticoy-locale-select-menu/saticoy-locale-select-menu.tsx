@@ -11,7 +11,7 @@ function SaticoyLocaleSelectMenu() {
 
     function getLocales() {
         const locales = i18nController.localeRepository.getNames(false);
-        return locales.map(l => ({ 'name': t(`locales.${l}`), value: l }));
+        return locales.map((l) => ({ name: t(`locales.${l}`), value: l }));
     }
 
     function getSelectedLocale(): string {
@@ -21,17 +21,18 @@ function SaticoyLocaleSelectMenu() {
 
     // Update the locale when the locale changes
     const updateLocale = (locale: string) => {
-        if (locale === 'auto')
-            return i18nController.isAutoLocale = true;
+        if (locale === 'auto') return (i18nController.isAutoLocale = true);
         i18nController.selectedLocale = locale;
-    }
+    };
 
-    return <LocaleSelectMenu
-        locales={getLocales()}
-        selectedLocale={getSelectedLocale()}
-        onChange={updateLocale}
-        stringAutomaticLanguage={t('locales.automatic_locale')}
-    />
+    return (
+        <LocaleSelectMenu
+            locales={getLocales()}
+            selectedLocale={getSelectedLocale()}
+            onChange={updateLocale}
+            stringAutomaticLanguage={t('locales.automatic_locale')}
+        />
+    );
 }
 
-export default SaticoyLocaleSelectMenu
+export default SaticoyLocaleSelectMenu;

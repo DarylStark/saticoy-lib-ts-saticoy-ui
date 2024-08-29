@@ -1,15 +1,10 @@
 import React from 'react';
 
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    IconButton
-} from '@chakra-ui/react'
+import { Menu, MenuButton, MenuList, IconButton } from '@chakra-ui/react';
 
 interface UserSelectableItemMenuProps {
-    children: React.ReactNode
-    icon: React.ReactElement
+    children: React.ReactNode;
+    icon: React.ReactElement;
 }
 
 function UserSelectableItemMenu(props: UserSelectableItemMenuProps) {
@@ -24,12 +19,10 @@ function UserSelectableItemMenu(props: UserSelectableItemMenuProps) {
                 size='lg'
                 fontSize={24}
             />
-            <MenuList>
-                {props.children}
-            </MenuList>
+            <MenuList>{props.children}</MenuList>
         </Menu>
     );
 }
 
-export default UserSelectableItemMenu
-export type { UserSelectableItemMenuProps }
+export default UserSelectableItemMenu;
+export type { UserSelectableItemMenuProps };
