@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 // Generic interfaces
-import { I18nController, ThemeController } from "@saticoy/core";
+import { I18nController, ThemeController } from '@saticoy/core';
 
 // Implementationss
 import { i18NextLocaleData } from './locales/i18next-locale-data';
-import SaticoyChakraStyle from "./themes/saticoy-style";
+import SaticoyChakraStyle from './themes/saticoy-style';
 
 // Objects
 import { themeController } from './globals/theme';

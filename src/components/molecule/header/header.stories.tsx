@@ -1,12 +1,11 @@
-import Header, { HeaderProps } from "./header";
-import { StoryFn } from "@storybook/react";
+import Header, { HeaderProps } from './header';
+import { StoryFn } from '@storybook/react';
 
-import UserSelectableItemMenu from "../user-icon-menu/user-selectable-item-menu";
-import SelectableItemMenu from "../selectable-item-menu/selectable-item-menu";
+import UserSelectableItemMenu from '../user-icon-menu/user-selectable-item-menu';
+import SelectableItemMenu from '../selectable-item-menu/selectable-item-menu';
 
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaGear } from "react-icons/fa6";
-
+import { BsThreeDotsVertical } from 'react-icons/bs';
+import { FaGear } from 'react-icons/fa6';
 
 export default {
     title: 'Molecules/Header',
@@ -23,30 +22,32 @@ Default.args = {
 export const WithMenus: StoryFn<HeaderProps> = Template.bind({});
 WithMenus.args = {
     children: 'Header title',
-    menus: <>
-        <UserSelectableItemMenu icon={<FaGear />}>
-            <SelectableItemMenu
-                items={[
-                    { 'name': 'Menuitem 1', value: 'example_menuitem_1' },
-                    { 'name': 'Menuitem 2', value: 'example_menuitem_2' },
-                    { 'name': 'Menuitem 3', value: 'example_menuitem_3' },
-                    { 'name': 'Menuitem 4', value: 'example_menuitem_4' },
-                ]}
-                defaultValue='auto'
-                value='auto'
-            />
-        </UserSelectableItemMenu>
-        <UserSelectableItemMenu icon={<BsThreeDotsVertical />}>
-            <SelectableItemMenu
-                items={[
-                    { 'name': 'Menuitem 1', value: 'example_menuitem_1' },
-                    { 'name': 'Menuitem 2', value: 'example_menuitem_2' },
-                    { 'name': 'Menuitem 3', value: 'example_menuitem_3' },
-                    { 'name': 'Menuitem 4', value: 'example_menuitem_4' },
-                ]}
-                defaultValue='auto'
-                value='auto'
-            />
-        </UserSelectableItemMenu>
-    </>
+    menus: (
+        <>
+            <UserSelectableItemMenu icon={<FaGear />}>
+                <SelectableItemMenu
+                    items={[
+                        { name: 'Menuitem 1', value: 'example_menuitem_1' },
+                        { name: 'Menuitem 2', value: 'example_menuitem_2' },
+                        { name: 'Menuitem 3', value: 'example_menuitem_3' },
+                        { name: 'Menuitem 4', value: 'example_menuitem_4' },
+                    ]}
+                    defaultValue='auto'
+                    value='auto'
+                />
+            </UserSelectableItemMenu>
+            <UserSelectableItemMenu icon={<BsThreeDotsVertical />}>
+                <SelectableItemMenu
+                    items={[
+                        { name: 'Menuitem 1', value: 'example_menuitem_1' },
+                        { name: 'Menuitem 2', value: 'example_menuitem_2' },
+                        { name: 'Menuitem 3', value: 'example_menuitem_3' },
+                        { name: 'Menuitem 4', value: 'example_menuitem_4' },
+                    ]}
+                    defaultValue='auto'
+                    value='auto'
+                />
+            </UserSelectableItemMenu>
+        </>
+    ),
 };

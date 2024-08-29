@@ -1,32 +1,32 @@
 // Saticoy Theme
-import { extendBaseTheme } from '@chakra-ui/react'
+import { extendBaseTheme } from '@chakra-ui/react';
 import SaticoyChakraStyle from './saticoy-style';
 import { Theme } from '@saticoy/core';
-import { cardAnatomy } from '@chakra-ui/anatomy'
-import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
+import { cardAnatomy } from '@chakra-ui/anatomy';
+import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 
 // Needed fonts
-import 'typeface-inter/inter.css'
+import 'typeface-inter/inter.css';
 
 const { definePartsStyle, defineMultiStyleConfig } =
-    createMultiStyleConfigHelpers(cardAnatomy.keys)
+    createMultiStyleConfigHelpers(cardAnatomy.keys);
 
 const fonts = {
     body: `'Inter'`,
-}
+};
 
 const components = {
     Heading: {
         baseStyle: {
             fontFamily: 'inherit',
-        }
+        },
     },
     PinInput: {
         baseStyle: {
             _placeholder: {
                 fontFamily: 'auto',
-            }
-        }
+            },
+        },
     },
     Card: defineMultiStyleConfig({
         sizes: {
@@ -34,23 +34,22 @@ const components = {
                 container: {
                     width: '400px',
                     maxWidth: '100%',
-                    borderRadius: '0'
+                    borderRadius: '0',
                 },
                 header: {
                     padding: '20px',
-                    paddingBottom: '0'
+                    paddingBottom: '0',
                 },
                 body: {
-                    padding: '20px'
+                    padding: '20px',
                 },
                 footer: {
-                    padding: '20px'
-
-                }
-            })
-        }
+                    padding: '20px',
+                },
+            }),
+        },
     }),
-}
+};
 
 const saticoy_theme: Theme<SaticoyChakraStyle> = {
     name: 'Saticoy',
@@ -64,13 +63,13 @@ const saticoy_theme: Theme<SaticoyChakraStyle> = {
                         bg: 'rgb(247, 249, 252)',
                         color: '#555',
                         fontSize: '16px',
-                        padding: '0px'
-                    }
+                        padding: '0px',
+                    },
                 },
             },
             fonts: fonts,
-            components: extendBaseTheme(components)
-        }
+            components: extendBaseTheme(components),
+        },
     },
     dark: {
         chakra_mode: 'dark',
@@ -82,13 +81,13 @@ const saticoy_theme: Theme<SaticoyChakraStyle> = {
                         color: 'white',
                         fontSize: '16px',
                         padding: '0px',
-                    }
+                    },
                 },
             },
             fonts: fonts,
-            components: extendBaseTheme(components)
-        }
-    }
+            components: extendBaseTheme(components),
+        },
+    },
 };
 
 export default saticoy_theme;

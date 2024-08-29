@@ -1,5 +1,5 @@
-import SaticoyThemeSelectMenu from "./saticoy-theme-select-menu";
-import { StoryFn } from "@storybook/react";
+import SaticoyThemeSelectMenu from './saticoy-theme-select-menu';
+import { StoryFn } from '@storybook/react';
 
 export default {
     title: 'Organisms/UserIconMenu/SaticoyThemeSelectMenu',
