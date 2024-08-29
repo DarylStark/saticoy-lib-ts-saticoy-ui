@@ -1,24 +1,27 @@
 {
   "name": "@saticoy/ui",
-  "private": true,
-  "version": "0.0.1",
+  "version": "0.0.5-dev",
+  "description": "UI components for Saticoy.",
+  "module": "dist/main.js",
+  "types": "dist/main.d.ts",
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "dist/ui.js",
-  "module": "dist/ui.js",
-  "exports": {
-    ".": {
-      "import": "./dist/ui.js"
-    }
-  },
   "scripts": {
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/main.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "Daryl Stark",
+  "license": "MIT",
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
     "@chakra-ui/react": "^2.8.2",

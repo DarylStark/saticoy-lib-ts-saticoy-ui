@@ -4,7 +4,7 @@ import { Theme } from '@saticoy/core';
 import OriginalSaticoyTheme from './saticoy'
 
 // Needed fonts
-import 'typeface-roboto-slab'
+import 'typeface-roboto-slab/index.css'
 
 const saticoy_roboto_slab: Theme<SaticoyChakraStyle> = JSON.parse(JSON.stringify(OriginalSaticoyTheme));
 

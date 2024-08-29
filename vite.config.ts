@@ -7,7 +7,7 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
     plugins: [
         react(),
-        dts({ include: ['lib'] })
+        dts({ include: ['src'] })
     ],
     base: '',
     build: {
@@ -16,7 +16,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/main.ts'),
             name: '@saticoy/ui',
             formats: ['es'],
-            fileName: 'ui'
+            fileName: 'main'
         },
         rollupOptions: {
             external: [
@@ -33,9 +33,7 @@ export default defineConfig({
                 "react-dom",
                 "react-helmet",
                 "react-i18next",
-                "react-icons",
-                "typeface-inter",
-                "typeface-roboto-slab"
+                "react-icons"
             ],
         },
     }
