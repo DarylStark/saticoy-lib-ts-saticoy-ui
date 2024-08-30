@@ -13,16 +13,14 @@ const saticoy_roboto_slab: Theme<SaticoyChakraStyle> = JSON.parse(
 saticoy_roboto_slab.name = 'Saticoy (Roboto Slab)';
 
 // Overwrite the fonts
-if (saticoy_roboto_slab.light) {
+if (saticoy_roboto_slab.light)
     saticoy_roboto_slab.light.chakra_theme.fonts = {
-        body: `'Roboto Slab'`,
+        body: '"Roboto Slab"',
     };
-}
 
-if (saticoy_roboto_slab.dark) {
+if (saticoy_roboto_slab.dark)
     saticoy_roboto_slab.dark.chakra_theme.fonts = {
-        body: `'Roboto Slab'`,
+        body: '"Roboto Slab"',
     };
-}
 
 export default saticoy_roboto_slab;
