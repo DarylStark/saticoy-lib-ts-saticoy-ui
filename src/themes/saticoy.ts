@@ -12,7 +12,7 @@ const { definePartsStyle, defineMultiStyleConfig } =
     createMultiStyleConfigHelpers(cardAnatomy.keys);
 
 const fonts = {
-    body: `'Inter'`,
+    body: 'Inter',
 };
 
 const components = {
