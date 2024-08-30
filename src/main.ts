@@ -11,9 +11,14 @@ export { default as SaticoyHeader } from './components/organisms/header/saticoy-
 export { default as SaticoyLocaleSelectMenu } from './components/organisms/user-icon-menu/saticoy-locale-select-menu/saticoy-locale-select-menu';
 export { default as SaticoyThemeSelectMenu } from './components/organisms/user-icon-menu/saticoy-theme-select-menu/saticoy-theme-select-menu';
 
+// Utilities
+export { extendLanguage } from './utilities';
+
+// Globals
+export * from './globals/eventbus';
+export * from './globals/i18n';
+export * from './globals/theme';
+
 // Contexts - will be the default export
 import SaticoyUI from './components/saticoy-ui';
 export default SaticoyUI;
-
-// Utilities
-export { extendLanguage } from './utilities';

@@ -1,6 +1,6 @@
 {
   "name": "@saticoy/ui",
-  "version": "0.0.5-dev",
+  "version": "0.0.6-dev",
   "description": "UI components for Saticoy.",
   "module": "dist/main.js",
   "types": "dist/main.d.ts",
