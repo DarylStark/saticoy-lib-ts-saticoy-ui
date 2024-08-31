@@ -16,6 +16,7 @@ const preview: Preview = {
             );
         },
     ],
+
     parameters: {
         controls: {
             matchers: {
@@ -27,6 +28,7 @@ const preview: Preview = {
             disable: true, // Disable the backgrounds toolbar
         },
     },
+
     globalTypes: {
         theme: {
             name: 'Theme',
@@ -50,6 +52,8 @@ const preview: Preview = {
             },
         },
     },
+
+    tags: ['autodocs']
 };
 
 export default preview;
